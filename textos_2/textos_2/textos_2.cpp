@@ -62,11 +62,11 @@ void lectura() {
 	string s;
 	int linea = 0;
 	//string nombre_artista, n_cancion, duracion;
-	cout << "Nota por cada debe de agregar 'txt.' al final";
-	cout << "diga en nombre de ubicacion: ";
+	
+	cout << "diga en nombre de ubicacion. Nota por cada debe de agregar '\\\.' debe poner un'/' y al final poner '.txt' ";
 	//es con el nombre del archivo
 	getline(cin, s);
-	
+
 	archivo.open(s.c_str(), ios::in);//abrir arcito en modo lectura
 	if (archivo.fail()) {
 		cout << "El archivo no esiste";
@@ -79,8 +79,8 @@ void lectura() {
 		//string g = "Hells Bells||AC/DC||5:12";
 		int encontrar = texto.find("||");
 		int pimero = 0;
-		
-		
+
+
 		while (encontrar != string::npos)//mientras que encontrar no sea igual a encontar al caracter divisor seguira buscando el dato hasta la segundaa parte
 		{/*por que la segunda parte porque, pirmero necesitamos convertir los numeros para poder usarlos, segundo su limite es cuando sea igual
 		 npos indica la posicion maxima que se puede guarda*/
@@ -89,19 +89,23 @@ void lectura() {
 			cout << grupo << " ";
 			pimero = encontrar + 2;
 			encontrar = texto.find("||", pimero);
-			
+
 		}
 		string numero = texto.substr(pimero);
 		cout << numero << endl;
 		int espaico = texto.find("\n");
 		int pri = 0;
 	}
-	
-	cout <<"sus canciones subidas son: " << linea << endl;//para saber cuantas canciones fueron subidas.
-	cout << "numero de canciones"<<s<<endl;// nombre del CD
+
+	cout << "sus canciones subidas son: " << linea << endl;//para saber cuantas canciones fueron subidas.
+
+	int n = s.find_last_of("/\\");
+	if (n != std::string::npos) {
+		cout << s.substr(n + 1);
+	}
 	archivo.close();
-	
-	
+
+
 }
 
 
