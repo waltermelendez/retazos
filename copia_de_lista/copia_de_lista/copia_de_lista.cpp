@@ -10,7 +10,7 @@ struct  NODO
 	int dato;
 	NODO* siguiente;
 };
-void insertarlista(NODO*&, int);
+void insertarlista(NODO*&, int);//mplica que estamos usando punteros para representar la estructura de datos y también pasamos algunos datos de tipo por referencia.
 void mostrarlista(NODO*);
 void menu();
 void buscarlista(NODO* lista, int);
