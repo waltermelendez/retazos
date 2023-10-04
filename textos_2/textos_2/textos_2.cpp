@@ -75,12 +75,16 @@ void lectura() {
 	string texto;
 	int linea = 0;
 	//string nombre_artista, n_cancion, duracion;
-	cout << "------------------------\n";
-	cout << "diga en nombre de ubicacion. Nota por cada debe de agregar '\\\' debe poner un'/' y al final poner '.txt' " << endl;
-	//es con el nombre del archivo
-	getline(cin, s);
+	int arrr = 1,ARR;
+	cout << "diga el numero de archivos\n";
+	getline(cin, ARR);
 	
-		
+	while (ARR==arrr)
+	{
+		cout << "------------------------\n";
+		cout << "diga en nombre de ubicacion. Nota por cada debe de agregar '\\\' debe poner un'/' y al final poner '.txt' " << endl;
+		//es con el nombre del archivo
+		getline(cin, s);
 		while (!archivo.eof())
 		{
 			archivo.open(s.c_str(), ios::in);//abrir arcito en modo lectura
@@ -124,6 +128,8 @@ void lectura() {
 			}
 
 		}
+	}
+		
 	
 	
 	
