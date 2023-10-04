@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include<string>
 #include<filesystem>
-#include <vector>
+
 
  // 
 
@@ -65,22 +65,17 @@ int main()
 void lectura() {
 	ifstream archivo;
 	string s;
-	int x = 1;
+	/*int x = 1;
 	cout << "link del porgrama";
-	cin >> x;
-	for (int i = 0;i < x;i++)
-	{
-
-	}
+	cin >> x;*/
+	
 	string texto;
 	int linea = 0;
 	//string nombre_artista, n_cancion, duracion;
-	int arrr = 1,ARR;
-	cout << "diga el numero de archivos\n";
-	getline(cin, ARR);
+	string cacnion;
+
 	
-	while (ARR==arrr)
-	{
+	
 		cout << "------------------------\n";
 		cout << "diga en nombre de ubicacion. Nota por cada debe de agregar '\\\' debe poner un'/' y al final poner '.txt' " << endl;
 		//es con el nombre del archivo
@@ -115,7 +110,9 @@ void lectura() {
 					string numero = texto.substr(pimero);
 					cout << numero << endl;
 					int espaico = texto.find("\n");
-					int pri = 0;
+					int cola = 0;
+					cacnion = texto.find("\n");
+
 				}
 
 				cout << "sus canciones subidas son: " << linea << endl;//para saber cuantas canciones fueron subidas.
@@ -124,11 +121,12 @@ void lectura() {
 				if (n != std::string::npos) {
 					cout << s.substr(n + 1);
 				}
+				cout << "\tsu cancion es: " << cacnion << endl;
 				archivo.close();
 			}
 
 		}
-	}
+	
 		
 	
 	
