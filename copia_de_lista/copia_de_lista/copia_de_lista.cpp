@@ -64,7 +64,7 @@ void menu() {
 			cout << "\n";
 			system("pause");
 			break;
-		case4:
+		case 4:
 			cout << "escriba el elemento a borrar\n";
 			cin >> d;
 			eliminarnodo(lista, d);

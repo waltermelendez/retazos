@@ -7,7 +7,7 @@
 #include<filesystem>
 
 
- // 
+ 
 
 
 
@@ -65,13 +65,11 @@ int main()
 void lectura() {
 	ifstream archivo;
 	string s;
-	/*int x = 1;
-	cout << "link del porgrama";
-	cin >> x;*/
+	
 	
 	string texto;
 	int linea = 0;
-	//string nombre_artista, n_cancion, duracion;
+	
 	string cacnion;
 
 	
