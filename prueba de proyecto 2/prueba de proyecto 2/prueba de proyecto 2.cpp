@@ -27,8 +27,8 @@ void lectura(queue<string>& colaLineas) {
     cout << " " << endl;
     cout << "Ingrese la ubicacion del archivo: ";
 
-    cin.ignore();
-    getline(cin, s);
+    cin.ignore();// no copiar lo escrito anteriormente
+    getline(cin, s);// leer lo excrito sin ningun fallo.
 
     archivo.open(s.c_str(), ios::in);
     if (archivo.fail()) {
@@ -115,7 +115,7 @@ int main() {
         switch (opcion) {
 
         case 1:
-            system("cls");
+            system("cls");//limpiar la pantalla
             cout << "Agregar Cancion" << endl;
             cout << " " << endl;
 
@@ -131,7 +131,7 @@ int main() {
             system("cls");
             if (op == 1) {
                 //puede dar fallo segun el idioma del usuario
-                system(" start %USERPROFILE%\\Documents");
+                system(" start %USERPROFILE%\\Documents");// se usa de esta forma para poder abrir cualquier carpeta en cualquier computadora
 
                 cout << "Copie la dirreccion del documento en el siguiente espacio\n";
 
