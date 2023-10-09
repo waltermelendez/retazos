@@ -65,7 +65,7 @@ void lectura(queue<string>& colaLineas) {
     cout << " " << endl;
     cout << "Cancion seleccionada: " << texto << endl;
     cout << " " << endl;
-    agregarLinea(colaLineas, texto); // Agregar la línea seleccionada a la cola
+       (colaLineas, texto); // Agregar la línea seleccionada a la cola
 
     cout << " " << endl;
     cout << "Canciones subidas: " << linea << endl;
